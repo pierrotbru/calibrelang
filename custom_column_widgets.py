@@ -54,6 +54,7 @@ from calibre.utils.icu import sort_key
 
 #ematest IS_LANG
 from calibre.gui2.languages import LanguagesEdit as LE
+from calibre.gui2.custom_column_widgets import Base, get_custom_columns_to_display_in_editor, column_is_comments, widgets, bulk_widgets, label_string, RemoveTags
 #ematest IS_LANG
 
 #ematest IS_LANG
@@ -100,20 +101,20 @@ class Lang(Base, LE):
 #ematest IS_LANG
 
 
-widgets = {
-        'bool' : Bool,
-        'rating' : Rating,
-        'int': Int,
-        'float': Float,
-        'datetime': DateTime,
-        'text' : Text,
-        'comments': comments_factory,
-        'series': Series,
-        'enumeration': Enumeration,
-#ematest IS_LANG
-        'lang': Lang,
-#ematest IS_LANG        
-}
+#widgets = {
+#        'bool' : Bool,
+#        'rating' : Rating,
+#        'int': Int,
+#        'float': Float,
+#        'datetime': DateTime,
+#        'text' : Text,
+#        'comments': comments_factory,
+#        'series': Series,
+#        'enumeration': Enumeration,
+##ematest IS_LANG
+#        'lang': Lang,
+##ematest IS_LANG        
+#}
 
 
 def populate_metadata_page(layout, db, book_id, bulk=False, two_column=False, parent=None):
@@ -314,16 +315,16 @@ class BulkLang(Base, LE):
 #ematest IS_LANG
 
 
-bulk_widgets = {
-        'bool' : BulkBool,
-        'rating' : BulkRating,
-        'int': BulkInt,
-        'float': BulkFloat,
-        'datetime': BulkDateTime,
-        'text' : BulkText,
-        'series': BulkSeries,
-        'enumeration': BulkEnumeration,
-#ematest IS_LANG        
-        'lang' : BulkLang,
-#ematest IS_LANG        
-}
+#bulk_widgets = {
+#        'bool' : BulkBool,
+#        'rating' : BulkRating,
+#        'int': BulkInt,
+#        'float': BulkFloat,
+#        'datetime': BulkDateTime,
+#        'text' : BulkText,
+#        'series': BulkSeries,
+#        'enumeration': BulkEnumeration,
+##ematest IS_LANG        
+#        'lang' : BulkLang,
+##ematest IS_LANG        
+#}
